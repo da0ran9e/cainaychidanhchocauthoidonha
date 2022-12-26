@@ -14,6 +14,9 @@
     </h1> 
     <h1 class="box2d"><img src='https://user-images.githubusercontent.com/98570451/206684017-30830739-fe2f-4b84-a388-767af8f8d6f2.jpeg' alt="Norway" width="100" height="100";></h1> 
  -->
+     <div class="center">
+        <img src='https://user-images.githubusercontent.com/98570451/205653381-e4dba360-7bbc-4720-a559-27dcf0993568.jpg' alt="Norway" width="600" height="600";>
+    </div>
 
         <table id="topbar">
             <tbody><tr>
@@ -35,7 +38,15 @@
                 <td class="box2d"; style="position: absolute; left: 65%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206915040-ee4bfed7-cc91-407c-b709-99a44cbd3bfb.jpeg' alt="Norway" width="100" height="133";></span></td>
                 <td class="box2d"; style="position: absolute; left: 55%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/208027163-c9c2d1f1-e02b-4877-85aa-939f8ac4b87f.jpeg' alt="Norway" width="100" height="133";></span></td>
                 <td class="box2d"; style="position: absolute; left: 45%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/208027188-20254817-055b-4176-ba39-bb20f5ffbd27.jpeg' alt="Norway" width="100" height="100";></span></td>
-                <!-- <td class="box2d"; style="position: absolute; left: 90%; top: -150px;"><span><img src='' alt="Norway" width="100" height="133";></span></td> -->
+                <td class="box2d"; style="position: absolute; left: 35%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495097-0ac5eaf4-7aec-477b-8b25-08c349f79dea.jpeg' alt="Norway" width="100" height="125";></span></td>
+                <td class="box2d"; style="position: absolute; left: 25%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495103-8f6e8d50-ff76-4c7d-acea-8dbf67a4548a.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d"; style="position: absolute; left: 15%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495110-a47b51be-9770-4b65-a611-e311635372f0.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d"; style="position: absolute; left: 00%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495117-7755bc56-a1f2-4ab1-9eb4-fe0f3e54f101.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d"; style="position: absolute; left: 10%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495467-a8aa221b-c31c-4e91-af00-c19f63d39da0.jpeg' alt="Norway" width="100" height="100";></span></td>
+                <td class="box2d"; style="position: absolute; left: 20%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495129-9fc34a24-754c-4834-813a-a93b9caf7da2.jpeg' alt="Norway" width="100" height="75";></span></td>
+                <td class="box2d"; style="position: absolute; left: 30%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495137-ddea6d6b-3167-4202-8501-e380eb1ffe67.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d"; style="position: absolute; left: 40%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495143-08a01235-f7d3-414e-b1cb-94e3b8be95f0.jpeg' alt="Norway" width="100" height="125";></span></td>
+                <!-- <td class="box2d"; style="position: absolute; left: 90%; top: -150px;"><span><img src='' alt="Norway" width="100" height="";></span></td> -->
 
                 <td class="box2d"; style="position: absolute; left: 1.4%; top: -120px;"><span>❤️</span></td>
                 <td class="box2d"; style="position: absolute; left: 5.6%; top: -120px;"><span>❤️</span></td>
@@ -257,6 +268,195 @@
             background-size: 1960px;*/
             
         }
+.card {
+ width: 190px;
+ height: 254px;
+ background: #f0f0f0;
+ border-radius: 10px;
+ text-align: center;
+ transition: all 0.5s;
+}
+
+.card:hover {
+ box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+ background-color: #4bb8ff;
+}
+
+.card .blob {
+ height: 10px;
+ width: 75%;
+ border-radius: 0 0 30px 30px;
+ margin: 0 auto;
+ background-color: #4bb8ff;
+ visibility: visible;
+ transition: all 0.3s;
+}
+
+.card:hover .blob {
+ height: 0;
+}
+
+.card .img {
+ display: flex;
+ margin: 30px auto 10px auto;
+ width: 70px;
+ height: 70px;
+ background-color: #4bb8ff;
+ border-radius: 50%;
+ font-size: 11px;
+ justify-content: center;
+ align-items: center;
+ transition: all 0.5s;
+}
+
+.card:hover .img {
+ width: 100%;
+ height: 70%;
+ border-radius: 10px 0 0;
+ margin: 0 auto;
+ background-color: #f0f0f0;
+ z-index: 99999;
+}
+
+.card h2 {
+ padding: 15px 10px;
+ font-size: 25px;
+ transition: all 0.1s;
+ z-index: -99;
+ line-height: 17px;
+}
+
+.card span {
+ font-size: 18px;
+}
+
+.card:hover h2 {
+ opacity: 0;
+ width: 100%;
+ position: absolute;
+ transition: all 0.5s;
+}
+
+.card>p {
+ opacity: 0;
+ transition: all 0.75s;
+}
+
+.card>p>svg {
+ padding: 5px;
+}
+
+.card:hover>p {
+ position: absolute;
+ bottom: 15px;
+ left: 35px;
+ opacity: 1;
+ transition: all 0.1s;
+}
+
+                                        .love-heart:before,#switch {
+                                         display: none;
+                                        }
+
+                                        .love-heart, .love-heart::after {
+                                         border-color: hsl(231deg 28% 86%);
+                                         border: 1px solid;
+                                         border-top-left-radius: 100px;
+                                         border-top-right-radius: 100px;
+                                         width: 10px;
+                                         height: 8px;
+                                         border-bottom: 0
+                                        }
+
+                                        .round {
+                                         position: absolute;
+                                         z-index: 1;
+                                         width: 8px;
+                                         height: 8px;
+                                         background: hsl(0deg 0% 100%);
+                                         box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
+                                         border-radius: 100%;
+                                         left: 0px;
+                                         bottom: -1px;
+                                         transition: all .5s ease;
+                                         animation: check-animation2 .5s forwards;
+                                        }
+
+                                        input:checked + label .round {
+                                         transform: translate(0px, 0px);
+                                         animation: check-animation .5s forwards;
+                                         background-color: hsl(0deg 0% 100%);
+                                        }
+
+                                        @keyframes check-animation {
+                                         0% {
+                                          transform: translate(0px, 0px);
+                                         }
+
+                                         50% {
+                                          transform: translate(0px, 7px);
+                                         }
+
+                                         100% {
+                                          transform: translate(7px, 7px);
+                                         }
+                                        }
+
+                                        @keyframes check-animation2 {
+                                         0% {
+                                          transform: translate(7px, 7px);
+                                         }
+
+                                         50% {
+                                          transform: translate(0px, 7px);
+                                         }
+
+                                         100% {
+                                          transform: translate(0px, 0px);
+                                         }
+                                        }
+
+                                        .love-heart {
+                                         box-sizing: border-box;
+                                         position: relative;
+                                         transform: rotate(-45deg) translate(-50%, -33px) scale(4);
+                                         display: block;
+                                         border-color: hsl(231deg 28% 86%);
+                                         cursor: pointer;
+                                         top: 0;
+                                        }
+
+                                        input:checked + .love-heart, input:checked + .love-heart::after, input:checked + .love-heart .bottom {
+                                         border-color: hsl(347deg 81% 61%);
+                                         box-shadow: inset 6px -5px 0px 2px hsl(347deg 99% 72%);
+                                        }
+
+                                        .love-heart::after, .love-heart .bottom {
+                                         content: "";
+                                         display: block;
+                                         box-sizing: border-box;
+                                         position: absolute;
+                                         border-color: hsl(231deg 28% 86%);
+                                        }
+
+                                        .love-heart::after {
+                                         right: -9px;
+                                         transform: rotate(90deg);
+                                         top: 7px;
+                                        }
+
+                                        .love-heart .bottom {
+                                         width: 11px;
+                                         height: 11px;
+                                         border-left: 1px solid;
+                                         border-bottom: 1px solid;
+                                         border-color: hsl(231deg 28% 86%);
+                                         left: -1px;
+                                         top: 5px;
+                                         border-radius: 0px 0px 0px 5px;
+                                        }
+
+
         #sampleDialog{
                 height:200px;
                 width:500px;
@@ -377,10 +577,9 @@
         #particles-js
         {
             height: 100%;
-            /*background: #660033;*/
-            /*background: url('https://drive.google.com/file/d/1veOJx9RLgR9-KTWowOq-7cbj_WhECsh3/view?usp=share_link');*/
-
+            display: block;
         }
+    
         #iframeAudio
         #cursor
         {
@@ -476,6 +675,28 @@
   padding-right: 20px;
   opacity: 45%;
 }
+.text-block-top
+{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 0 0 30px 30px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.text-block-top:hover
+{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+      padding-left: 20px;
+  padding-right: 20px;
+  opacity: 1;
+    transition: 0.5s; 
+
+}
 .bg{
             height: 100%;
             width: 2000;
@@ -507,9 +728,6 @@
 <body>
 <!--    <img src="img.png" alt="Snow" style="width:100%;"> -->
     <div id="player"></div>
-    <div class="center">
-        <img src='https://user-images.githubusercontent.com/98570451/205653381-e4dba360-7bbc-4720-a559-27dcf0993568.jpg' alt="Norway" width="600" height="600";>
-    </div>
     <div class="bg"><canvas id="bgd"></canvas></div>
     <div class="centered">
 
@@ -535,9 +753,10 @@
         <canvas id="pinkboard"></canvas>
     </div> -->
 
-    <div id="particles-js"></div>
+    <div id="particles-js" style="display: none;"></div>
+
     <div class="container">
-  <img src="nature.jpg" alt="Norway" style="width:100%;">
+
   <div class="text-block">
 <!--     <p>Nếu có một ngày cậu nhớ ra cái link này và mở lên</p>
     <p>Thì mình muốn cậu biết là:</p>
@@ -549,6 +768,30 @@
 
   </div>
 </div>
+
+<div class="text-block-top">
+<div class="love">
+  <input id="switch" type="checkbox">
+  <label class="love-heart" onclick="particles()" for="switch">
+    <i class="left"></i>
+    <i class="right"></i>
+    <i class="bottom"></i>
+    <div class="round"></div>
+  </label>
+</div>
+</div>
+    <script type="text/javascript">
+        function particles(){
+        var heart = document.getElementById('particles-js');
+        if (heart.style.display === "none") {
+    heart.style.display = "block";
+  } else {
+    heart.style.display = "none";
+  }
+    }
+    </script>
+
+
     <div id ="cursor"></div>
 
     <!-- <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/symbols/sym-6/sym501.ani), url(https://cur.cursors-4u.net/symbols/sym-6/sym501.png), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2010/04/17/animated-sparkly-love-heart.html" target="_blank" title="Animated  Sparkly Love Heart"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Animated  Sparkly Love Heart" style="position:absolute; top: 0px; right: 0px;" /></a> -->
