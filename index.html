@@ -17,35 +17,766 @@
      <div class="center">
         <img src='https://user-images.githubusercontent.com/98570451/205653381-e4dba360-7bbc-4720-a559-27dcf0993568.jpg' alt="Norway" width="600" height="600";>
     </div>
+    <style>
+        body
+        {
+            vertical-align: middle;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+
+            /*background: url('https://lh3.googleusercontent.com/3Ur6Tf-pGSYPaA2H7sQUQLEHZchCaW_6QhYdtoBcXQaKSJfRp50Jlm8JYBlt_BX53Ucn5iusR_6MmCIL0_t-iDs-BBsDE7ETBnFgmUCfTAYu2ACMAiBxG80DyQHwozWzaWx9mb9z0YV2LfDu7AZ5dKdD6DUrrV1RPY92cOr9J5dgAwxjsXRCB84Yp2zxjRJ9IdXXH6PDtv9XCUcvVfdRxLhkJtdMpGrDO5256ZvwlGcmXhFCV88-7UKnpdOutCVV0oiK7Hp18HaywlZPOUo2JWFmI52rd_utyh3pq5HTnBd1fp6VfXYzpjqALglNe70ZtkV6GqLHzKHQyfYMgOuE5Z_Ijc8Pcdx89Gb7LcCbQx9t1witRkjGdQNXsfHSEDStY7V4atyygS81IOR6NRyw-H8XXVXRYz7lBKItHhhjY9jQhpDqHJDNA8cl_dkEx7ArK_tcBBurbMOH_aFL8NyZSh9h7e-YsGLD0ieAG65lTOEzL_ZunRerOrpeRXIzvtn_7h2aDtIvhSOm1PzY8kfm9eqdiJexVxUSZ7-JLnhDbnlHIqKOnMGVYeCbLACYmVi0z8hI08ZK6wdOj-28cEtExIU1YLVy1XV0VkFBrWGajsBrUzC6cc4saN59fwqi2pxqqRqoPiLAT_7G3OpY7XY_LOuS-pQyK_2Mc8q0_QSoKWhBcMGBg52_DTlKpyCUNc-q9uGiQyaJVMt75vmvA6s7xEy-ui9ZzV75oUGffWHDRKaNFkrj222G_Yp1gAG-RzUG-YgK_39ePUleSHqsxJ_YQeuF42LYmQ42bDeCzVjjOjCXzc4TOFhPTDpTiCwl5Wek8M3a2of-XeAqdTjMY8UviHrxxaRVsz0ILo20ik2q-dvQfaBZEFSghR3mkJEpbFuiHy52R3s5KSZawZC1NuyushKVpPLqMhIOJbheTC6a-Vb6b5E=w1659-h933-no?authuser=0');
+            background-size: 1960px;*/
+            
+        }
+.card {
+ width: 190px;
+ height: 254px;
+ background: #f0f0f0;
+ border-radius: 10px;
+ text-align: center;
+ transition: all 0.5s;
+}
+
+.card:hover {
+ box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+ background-color: #4bb8ff;
+}
+
+.card .blob {
+ height: 10px;
+ width: 75%;
+ border-radius: 0 0 30px 30px;
+ margin: 0 auto;
+ background-color: #4bb8ff;
+ visibility: visible;
+ transition: all 0.3s;
+}
+
+.card:hover .blob {
+ height: 0;
+}
+
+.card .img {
+ display: flex;
+ margin: 30px auto 10px auto;
+ width: 70px;
+ height: 70px;
+ background-color: #4bb8ff;
+ border-radius: 50%;
+ font-size: 11px;
+ justify-content: center;
+ align-items: center;
+ transition: all 0.5s;
+}
+
+.card:hover .img {
+ width: 100%;
+ height: 70%;
+ border-radius: 10px 0 0;
+ margin: 0 auto;
+ background-color: #f0f0f0;
+ z-index: 99999;
+}
+
+.card h2 {
+ padding: 15px 10px;
+ font-size: 25px;
+ transition: all 0.1s;
+ z-index: -99;
+ line-height: 17px;
+}
+
+.card span {
+ font-size: 18px;
+}
+
+.card:hover h2 {
+ opacity: 0;
+ width: 100%;
+ position: absolute;
+ transition: all 0.5s;
+}
+
+.card>p {
+ opacity: 0;
+ transition: all 0.75s;
+}
+
+.card>p>svg {
+ padding: 5px;
+}
+
+.card:hover>p {
+ position: absolute;
+ bottom: 15px;
+ left: 35px;
+ opacity: 1;
+ transition: all 0.1s;
+}
+
+                                        .love-heart:before,#switch {
+                                         display: none;
+                                        }
+
+                                        .love-heart, .love-heart::after {
+                                         border-color: hsl(231deg 28% 86%);
+                                         border: 1px solid;
+                                         border-top-left-radius: 100px;
+                                         border-top-right-radius: 100px;
+                                         width: 10px;
+                                         height: 8px;
+                                         border-bottom: 0
+                                        }
+
+                                        .round {
+                                         position: absolute;
+                                         z-index: 1;
+                                         width: 8px;
+                                         height: 8px;
+                                         background: hsl(0deg 0% 100%);
+                                         box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
+                                         border-radius: 100%;
+                                         left: 0px;
+                                         bottom: -1px;
+                                         transition: all .5s ease;
+                                         animation: check-animation2 .5s forwards;
+                                        }
+
+                                        input:checked + label .round {
+                                         transform: translate(0px, 0px);
+                                         animation: check-animation .5s forwards;
+                                         background-color: hsl(0deg 0% 100%);
+                                        }
+
+                                        @keyframes check-animation {
+                                         0% {
+                                          transform: translate(0px, 0px);
+                                         }
+
+                                         50% {
+                                          transform: translate(0px, 7px);
+                                         }
+
+                                         100% {
+                                          transform: translate(7px, 7px);
+                                         }
+                                        }
+
+                                        @keyframes check-animation2 {
+                                         0% {
+                                          transform: translate(7px, 7px);
+                                         }
+
+                                         50% {
+                                          transform: translate(0px, 7px);
+                                         }
+
+                                         100% {
+                                          transform: translate(0px, 0px);
+                                         }
+                                        }
+
+                                        .love-heart {
+                                         box-sizing: border-box;
+                                         position: relative;
+                                         transform: rotate(-45deg) translate(-50%, -33px) scale(4);
+                                         display: block;
+                                         border-color: hsl(231deg 28% 86%);
+                                         cursor: pointer;
+                                         top: 0;
+                                        }
+
+                                        input:checked + .love-heart, input:checked + .love-heart::after, input:checked + .love-heart .bottom {
+                                         border-color: hsl(347deg 81% 61%);
+                                         box-shadow: inset 6px -5px 0px 2px hsl(347deg 99% 72%);
+                                        }
+
+                                        .love-heart::after, .love-heart .bottom {
+                                         content: "";
+                                         display: block;
+                                         box-sizing: border-box;
+                                         position: absolute;
+                                         border-color: hsl(231deg 28% 86%);
+                                        }
+
+                                        .love-heart::after {
+                                         right: -9px;
+                                         transform: rotate(90deg);
+                                         top: 7px;
+                                        }
+
+                                        .love-heart .bottom {
+                                         width: 11px;
+                                         height: 11px;
+                                         border-left: 1px solid;
+                                         border-bottom: 1px solid;
+                                         border-color: hsl(231deg 28% 86%);
+                                         left: -1px;
+                                         top: 5px;
+                                         border-radius: 0px 0px 0px 5px;
+                                        }
+
+                                                                                        .card1 {
+                                                                                          width: 12rem;
+                                                                                          cursor: pointer;
+                                                                                          opacity: 1;
+                                                                                        }
+
+                                                                                        .content1 {
+                                                                                          text-align: center;
+                                                                                          position: relative;
+                                                                                          transition: all 2.25s;
+                                                                                          background-color: #ff4d4d;
+                                                                                          padding: 5em;
+                                                                                          transform-style: preserve-3d;
+                                                                                        }
+
+                                                                                        .card1:hover .content1 {
+                                                                                          transform: rotateY(0.5turn);
+                                                                                        }
+
+                                                                                        .front,
+                                                                                        .back {
+                                                                                          position: absolute;
+                                                                                          top: 0;
+                                                                                          left: 0;
+                                                                                          bottom: 0;
+                                                                                          right: 0;
+                                                                                          padding: 2em;
+                                                                                          transform-style: preserve-3d;
+                                                                                          backface-visibility: hidden;
+                                                                                        }
+
+                                                                                        .title1 {
+                                                                                          transform: translateZ(5rem);
+                                                                                          font-size: 2rem;
+                                                                                        }
+
+                                                                                        .subtitle {
+                                                                                          transform: translateZ(2rem);
+                                                                                        }
+
+                                                                                        .back {
+                                                                                          transform: rotateY(0.5turn);
+                                                                                          background-color:  #ff9999;
+                                                                                        }
+
+                                                                                        .description {
+                                                                                          transform: translateZ(3rem);
+                                                                                        }
+                                                                                                                                            button {
+                                                                                                                                              width: 140px;
+                                                                                                                                              height: 56px;
+                                                                                                                                              overflow: hidden;
+                                                                                                                                              border: none;
+                                                                                                                                              color: #fff;
+                                                                                                                                              background: none;
+                                                                                                                                              position: relative;
+                                                                                                                                              padding-bottom: 2em;
+                                                                                                                                            }
+
+                                                                                                                                            button > div,button > svg {
+                                                                                                                                              position: absolute;
+                                                                                                                                              width: 100%;
+                                                                                                                                              height: 100%;
+                                                                                                                                              display: flex;
+                                                                                                                                            }
+
+                                                                                                                                            button:before {
+                                                                                                                                              content: "";
+                                                                                                                                              position: absolute;
+                                                                                                                                              height: 2px;
+                                                                                                                                              bottom: 0;
+                                                                                                                                              left: 0;
+                                                                                                                                              width: 100%;
+                                                                                                                                              transform: scaleX(0);
+                                                                                                                                              transform-origin: bottom right;
+                                                                                                                                              background: currentColor;
+                                                                                                                                              transition: transform 0.25s ease-out;
+                                                                                                                                            }
+
+                                                                                                                                            button:hover:before {
+                                                                                                                                              transform: scaleX(1);
+                                                                                                                                              transform-origin: bottom left;
+                                                                                                                                            }
+
+                                                                                                                                            button .clone > *,button .text > * {
+                                                                                                                                              opacity: 1;
+                                                                                                                                              font-size: 1rem;
+                                                                                                                                              transition: 0.2s;
+                                                                                                                                              margin-left: 4px;
+                                                                                                                                            }
+
+                                                                                                                                            button .clone > * {
+                                                                                                                                              transform: translateY(60px);
+                                                                                                                                            }
+
+                                                                                                                                            button:hover .clone > * {
+                                                                                                                                              opacity: 1;
+                                                                                                                                              transform: translateY(0px);
+                                                                                                                                              transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+                                                                                                                                            }
+
+                                                                                                                                            button:hover .text > * {
+                                                                                                                                              opacity: 1;
+                                                                                                                                              transform: translateY(-60px);
+                                                                                                                                              transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+                                                                                                                                            }
+
+                                                                                                                                            button:hover .clone > :nth-child(1) {
+                                                                                                                                              transition-delay: 0.15s;
+                                                                                                                                            }
+
+                                                                                                                                            button:hover .clone > :nth-child(2) {
+                                                                                                                                              transition-delay: 0.2s;
+                                                                                                                                            }
+
+                                                                                                                                            button:hover .clone > :nth-child(3) {
+                                                                                                                                              transition-delay: 0.25s;
+                                                                                                                                            }
+
+                                                                                                                                            button:hover .clone > :nth-child(4) {
+                                                                                                                                              transition-delay: 0.3s;
+                                                                                                                                            }
+                                                                                                                                            /* icon style and hover */
+                                                                                                                                            button svg {
+                                                                                                                                              width: 20px;
+                                                                                                                                              right: 0;
+                                                                                                                                              top: 50%;
+                                                                                                                                              transform: translateY(-50%) rotate(-50deg);
+                                                                                                                                              transition: 0.2s ease-out;
+                                                                                                                                            }
+
+                                                                                                                                            button:hover svg {
+                                                                                                                                              transform: translateY(-50%) rotate(-90deg);
+                                                                                                                                            }
+
+
+        #sampleDialog{
+                height:200px;
+                width:500px;
+                background:white;
+                border:2px solid black;
+                position:fixed;
+                overflow:hidden;
+                z-index:99;
+            }
+            
+            #sampleDialog #title{
+                background-color: black;
+                font-weight:bold;
+                color:white;
+                height:20px;
+                padding:2px;
+            }
+            
+            #sampleDialog #content{
+                padding:2px;
+            }
+            
+            #sampleDialog #title:hover{
+                cursor:move;
+                background:gray;
+            }
+            
+            #sampleDialog #close{
+                cursor:pointer;
+                position:absolute;
+                color:white;
+                font-weight:bold;
+                top:0;
+                z-index:100;
+            }
+            
+            #overlay{
+                width:100%;
+                height:100%;
+                left:0;
+                top:0;
+                position:fixed;
+                background:gray;
+                opacity:0.5;
+                z-index:98;
+            }
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #f00;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+
+
+        }
+        .box {
+            height: 100%;
+            width: 2000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+/*            background: #f00;
+            opacity: 10%;*/
+        }
+
+
+        canvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            
+           /* background:#990033;*/
+        }
+
+        #pinkboard {
+            position: relative;
+            margin: auto;
+            height: 3000px;
+            width: 3000px;
+            animation: animate 1.3s infinite;
+;
+
+
+        }
+
+        #pinkboard:before,
+        #pinkboard:after {
+            content: '';
+            position: absolute;
+            /* background: #FF5CA4; */
+            background: #FF0000;
+            width: 1000px;
+            height: 1600px;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+
+        #pinkboard:before {
+            left: 100px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+                0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        #pinkboard:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        #particles-js
+        {
+            height: 100%;
+            display: block;
+        }
+
+        #iframeAudio
+        #cursor
+        {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #f00;
+            box-sizing: border-box;
+            transition: 0.1s;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+            cursor: none;
+            animation: animatee 5s linear infinite;
+
+        }
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #f00;
+            justify-content: center;
+            align-items: center;
+            opacity: 80%;
+
+            
+            
+        }
+        .bakground-img
+        {
+                     margin: 0;
+            padding: 0;
+            height: 100vh;
+/*        background: #f66;
+        opacity: 1%;*/  
+        }
+        canvas:hover ~ #cursor
+        {
+            width: 100px;
+            height: 100px;
+            border: 2px dashed #F00;
+        }
+    @keyframes animatee
+    {
+        0%
+        {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        100%
+        {
+            transform: translate(-50%,-50%) rotate(360deg);
+        }
+    }
+    @keyframes animate {
+            0% {
+                transform: scale(1.2);
+            }
+
+            30% {
+                transform: scale(1);
+            }
+
+            60% {
+                transform: scale(1.4);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
+        }
+/*        .background-image
+        {
+            background-image: url('https://drive.google.com/file/d/1veOJx9RLgR9-KTWowOq-7cbj_WhECsh3/view?usp=share_link');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 100vh;
+        }*/
+/* Container holding the image and the text */
+.container {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 45%;
+}
+.text-block-top
+{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 0 0 30px 30px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.text-block-top:hover
+{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+      padding-left: 20px;
+  padding-right: 20px;
+  opacity: 1;
+    transition: 0.5s; 
+
+}
+.text-block-center
+{
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      background-color: black;
+      color: white;
+      padding-left: 20px;
+      padding-right: 20px;
+      opacity: 45%;
+    justify-content: center;
+    align-items: center;
+        padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 0 0 30px 30px;
+  display: block;
+  transition: 2s;
+}
+.text-block-center:after
+{
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 50%;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: 45%;
+    transition: 2s;
+
+}
+.text-block-center .show{
+    display: block;
+    animation: Fade 2s;
+
+}
+@keyframes Fade{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.bg{
+            height: 100%;
+            width: 2000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            background: #f00;
+            opacity: 5%;
+
+}
+.❤️{
+    color: #f00;
+}
+#bgd 
+{
+            position: relative;
+            margin: auto;
+            height: 3000px;
+            width: 3000px;
+            animation: animate 1.3s infinite;
+}
+
+    </style>
+
+</head>
+<body>
+<!--    <img src="img.png" alt="Snow" style="width:100%;"> -->
+    <div id="player"></div>
+    <div class="bg"><canvas id="bgd"></canvas></div>
+    <div class="centered">
+
+      <h1 class="STARDUST3">BESIDE<strong>❤</strong> Y O U</h1>
+ 
+    </div>
+
+
+    <div class="centered">
+
+        <h2>Nov.9th.2022</h2>
+      <h3></h3>
+      <h4>🥥_cocomelon45_🍉</h4>
+                    
+
+    </div>
+                
+
+    <div class="background-image"></div>
+
+
+<!--     <div class="box">
+        <canvas id="pinkboard"></canvas>
+    </div> -->
+
+    <div id="particles-js" style="display: none;">
+
+    <div class="container">
+
+  <div class="text-block-right">
+<!--     <p>Nếu có một ngày cậu nhớ ra cái link này và mở lên</p>
+    <p>Thì mình muốn cậu biết là:</p>
+    <h4 class="❤️">Mình vẫn yêu cậu rất nhiều ❤️</h4> -->
+    <h4>🦭 Biết tại sao ngôi sao đó sáng không? <br/> Do được cậu nhìn nên nó mới có cơ hội tỏa sáng đó ❤️</h4>
+    <audio controls autoplay loop>
+    <source src="https://docs.google.com/uc?export=download&id=1lqIiBBhNU4UKaIHFELjhbOxhX1jGynxp" type="audio/mpeg">
+</audio>
+
+  </div>
+</div>
+</div>
+
+<div class="text-block-top">
+<div class="love">
+  <input id="switch" type="checkbox">
+  <label class="love-heart" onclick="particles()" for="switch">
+    <i class="left"></i>
+    <i class="right"></i>
+    <i class="bottom"></i>
+    <div class="round"></div>
+  </label>
+</div>
+</div>
+
+
+    <script type="text/javascript">
+        function particles(){
+        var heart = document.getElementById('particles-js');
+        if (heart.style.display === "none") {
+    heart.style.display = "block";
+  } else {
+    heart.style.display = "none";
+  }
+    }
+    </script>
+
+
+    <script type="text/javascript">
+        function Popup()
+        {
+
+            var popup = document.getElementById('popupT')
+            popup.style.display = "block"       
+        }
+    </script>
+
+
+    <div id ="cursor"></div>
 
         <table id="topbar">
             <tbody><tr>
-                <td class="box2d"; style="position: absolute; left: 00%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206827898-922e95bf-7ae8-47a9-b86b-b8edebcddc05.png' alt="Norway" width="100" height="100";></span></td>
-                <td class="box2d"; style="position: absolute; left: 05%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206885232-42d7ea25-a8c8-4abc-866a-4eb070fafdad.jpeg' alt="Norway" width="133" height="100";></span></td>
-                <td class="box2d"; style="position: absolute; left: 10%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206684017-30830739-fe2f-4b84-a388-767af8f8d6f2.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 20%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692641-ab91255d-3f02-4d28-8452-d985951a258b.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 30%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692646-0a719fc7-fcba-4ed5-ab7f-c5d49a18020c.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 40%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692653-eefad1b8-c291-4c83-97b7-600820c2d40a.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 50%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692656-e87f2ea7-6261-467f-ab64-f0787ef99cd8.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 60%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692658-d96f9126-00e1-4d99-8ee8-19d309d6dbb5.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 70%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692669-cfa05141-725d-4777-9318-1c15c70a0abe.jpeg' alt="Norway" width="100" height="123";></span></td>
-                <td class="box2d"; style="position: absolute; left: 80%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692665-8f591c48-2a72-4fff-82f1-597642f5e5c9.jpeg' alt="Norway" width="100" height="100";></span></td>
-                <td class="box2d"; style="position: absolute; left: 90%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692674-aada2c39-42aa-4ebd-a6a8-fc6d56a4dc79.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 100%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206836502-fe8a202b-b20d-44a6-a38c-14eb88798c02.jpg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 95%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206836506-ccdaa9d7-9329-408d-962b-924704843cd3.jpg' alt="Norway" width="133" height="100";></span></td>
-                <td class="box2d"; style="position: absolute; left: 85%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206915034-026afa10-0a3b-4581-ade7-617b00bf5cba.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 75%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206915036-a1c1e3eb-7500-4a33-8312-4c376b94a992.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 65%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206915040-ee4bfed7-cc91-407c-b709-99a44cbd3bfb.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 55%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/208027163-c9c2d1f1-e02b-4877-85aa-939f8ac4b87f.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 45%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/208027188-20254817-055b-4176-ba39-bb20f5ffbd27.jpeg' alt="Norway" width="100" height="100";></span></td>
-                <td class="box2d"; style="position: absolute; left: 35%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495097-0ac5eaf4-7aec-477b-8b25-08c349f79dea.jpeg' alt="Norway" width="100" height="125";></span></td>
-                <td class="box2d"; style="position: absolute; left: 25%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495103-8f6e8d50-ff76-4c7d-acea-8dbf67a4548a.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 15%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495110-a47b51be-9770-4b65-a611-e311635372f0.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 00%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495117-7755bc56-a1f2-4ab1-9eb4-fe0f3e54f101.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 10%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495467-a8aa221b-c31c-4e91-af00-c19f63d39da0.jpeg' alt="Norway" width="100" height="100";></span></td>
-                <td class="box2d"; style="position: absolute; left: 20%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495129-9fc34a24-754c-4834-813a-a93b9caf7da2.jpeg' alt="Norway" width="100" height="75";></span></td>
-                <td class="box2d"; style="position: absolute; left: 30%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495137-ddea6d6b-3167-4202-8501-e380eb1ffe67.jpeg' alt="Norway" width="100" height="133";></span></td>
-                <td class="box2d"; style="position: absolute; left: 40%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495143-08a01235-f7d3-414e-b1cb-94e3b8be95f0.jpeg' alt="Norway" width="100" height="125";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 00%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206827898-922e95bf-7ae8-47a9-b86b-b8edebcddc05.png' alt="Norway" width="100" height="100";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 05%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206885232-42d7ea25-a8c8-4abc-866a-4eb070fafdad.jpeg' alt="Norway" width="133" height="100";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 10%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206684017-30830739-fe2f-4b84-a388-767af8f8d6f2.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 20%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692641-ab91255d-3f02-4d28-8452-d985951a258b.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 30%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692646-0a719fc7-fcba-4ed5-ab7f-c5d49a18020c.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 40%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692653-eefad1b8-c291-4c83-97b7-600820c2d40a.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 50%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692656-e87f2ea7-6261-467f-ab64-f0787ef99cd8.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 60%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692658-d96f9126-00e1-4d99-8ee8-19d309d6dbb5.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 70%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692669-cfa05141-725d-4777-9318-1c15c70a0abe.jpeg' alt="Norway" width="100" height="123";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 80%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692665-8f591c48-2a72-4fff-82f1-597642f5e5c9.jpeg' alt="Norway" width="100" height="100";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 90%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206692674-aada2c39-42aa-4ebd-a6a8-fc6d56a4dc79.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 100%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206836502-fe8a202b-b20d-44a6-a38c-14eb88798c02.jpg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 95%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206836506-ccdaa9d7-9329-408d-962b-924704843cd3.jpg' alt="Norway" width="133" height="100";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 85%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206915034-026afa10-0a3b-4581-ade7-617b00bf5cba.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 75%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206915036-a1c1e3eb-7500-4a33-8312-4c376b94a992.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 65%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/206915040-ee4bfed7-cc91-407c-b709-99a44cbd3bfb.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 55%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/208027163-c9c2d1f1-e02b-4877-85aa-939f8ac4b87f.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 45%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/208027188-20254817-055b-4176-ba39-bb20f5ffbd27.jpeg' alt="Norway" width="100" height="100";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 35%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495097-0ac5eaf4-7aec-477b-8b25-08c349f79dea.jpeg' alt="Norway" width="100" height="125";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 25%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495103-8f6e8d50-ff76-4c7d-acea-8dbf67a4548a.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 15%; top: -150px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495110-a47b51be-9770-4b65-a611-e311635372f0.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 00%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495117-7755bc56-a1f2-4ab1-9eb4-fe0f3e54f101.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 10%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495467-a8aa221b-c31c-4e91-af00-c19f63d39da0.jpeg' alt="Norway" width="100" height="100";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 20%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495129-9fc34a24-754c-4834-813a-a93b9caf7da2.jpeg' alt="Norway" width="100" height="75";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 30%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495137-ddea6d6b-3167-4202-8501-e380eb1ffe67.jpeg' alt="Norway" width="100" height="133";></span></td>
+                <td class="box2d" ondblclick="Popup()" style="position: absolute; left: 40%; top: -155px;"><span><img src='https://user-images.githubusercontent.com/98570451/209495143-08a01235-f7d3-414e-b1cb-94e3b8be95f0.jpeg' alt="Norway" width="100" height="125";></span></td>
                 <!-- <td class="box2d"; style="position: absolute; left: 90%; top: -150px;"><span><img src='' alt="Norway" width="100" height="";></span></td> -->
 
                 <td class="box2d"; style="position: absolute; left: 1.4%; top: -120px;"><span>❤️</span></td>
@@ -252,547 +983,47 @@
                 <td class="box2d empty" style="width: 271px; position: absolute; left: 1653.15px; top: 1289.34px; transform: rotate(101.36deg) translateZ(0px);"><span>&nbsp;</span></td>
             </tr> -->
         </tbody></table>
+<div class="text-block-center"; id="popupT"; style="display: none;">
+                                                                <div class="card1">
+                                                               <div class="content1">
+                                                                   <div class="front">
+                                                                       <h3 class="title1" id="tit">Hey</h3>
+                                                                       <p class="subtitle" id="subtit">Hover me :)</p>
+                                                                   </div>
 
-    <style>
-        body
-        {
-            vertical-align: middle;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            overflow: hidden;
+                                                                   <div class="back">
+                                                                       <p class="description" id="des">
+                                                                           I love you❤️
+                                                                       </p>
 
-            /*background: url('https://lh3.googleusercontent.com/3Ur6Tf-pGSYPaA2H7sQUQLEHZchCaW_6QhYdtoBcXQaKSJfRp50Jlm8JYBlt_BX53Ucn5iusR_6MmCIL0_t-iDs-BBsDE7ETBnFgmUCfTAYu2ACMAiBxG80DyQHwozWzaWx9mb9z0YV2LfDu7AZ5dKdD6DUrrV1RPY92cOr9J5dgAwxjsXRCB84Yp2zxjRJ9IdXXH6PDtv9XCUcvVfdRxLhkJtdMpGrDO5256ZvwlGcmXhFCV88-7UKnpdOutCVV0oiK7Hp18HaywlZPOUo2JWFmI52rd_utyh3pq5HTnBd1fp6VfXYzpjqALglNe70ZtkV6GqLHzKHQyfYMgOuE5Z_Ijc8Pcdx89Gb7LcCbQx9t1witRkjGdQNXsfHSEDStY7V4atyygS81IOR6NRyw-H8XXVXRYz7lBKItHhhjY9jQhpDqHJDNA8cl_dkEx7ArK_tcBBurbMOH_aFL8NyZSh9h7e-YsGLD0ieAG65lTOEzL_ZunRerOrpeRXIzvtn_7h2aDtIvhSOm1PzY8kfm9eqdiJexVxUSZ7-JLnhDbnlHIqKOnMGVYeCbLACYmVi0z8hI08ZK6wdOj-28cEtExIU1YLVy1XV0VkFBrWGajsBrUzC6cc4saN59fwqi2pxqqRqoPiLAT_7G3OpY7XY_LOuS-pQyK_2Mc8q0_QSoKWhBcMGBg52_DTlKpyCUNc-q9uGiQyaJVMt75vmvA6s7xEy-ui9ZzV75oUGffWHDRKaNFkrj222G_Yp1gAG-RzUG-YgK_39ePUleSHqsxJ_YQeuF42LYmQ42bDeCzVjjOjCXzc4TOFhPTDpTiCwl5Wek8M3a2of-XeAqdTjMY8UviHrxxaRVsz0ILo20ik2q-dvQfaBZEFSghR3mkJEpbFuiHy52R3s5KSZawZC1NuyushKVpPLqMhIOJbheTC6a-Vb6b5E=w1659-h933-no?authuser=0');
-            background-size: 1960px;*/
-            
-        }
-.card {
- width: 190px;
- height: 254px;
- background: #f0f0f0;
- border-radius: 10px;
- text-align: center;
- transition: all 0.5s;
-}
-
-.card:hover {
- box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
- background-color: #4bb8ff;
-}
-
-.card .blob {
- height: 10px;
- width: 75%;
- border-radius: 0 0 30px 30px;
- margin: 0 auto;
- background-color: #4bb8ff;
- visibility: visible;
- transition: all 0.3s;
-}
-
-.card:hover .blob {
- height: 0;
-}
-
-.card .img {
- display: flex;
- margin: 30px auto 10px auto;
- width: 70px;
- height: 70px;
- background-color: #4bb8ff;
- border-radius: 50%;
- font-size: 11px;
- justify-content: center;
- align-items: center;
- transition: all 0.5s;
-}
-
-.card:hover .img {
- width: 100%;
- height: 70%;
- border-radius: 10px 0 0;
- margin: 0 auto;
- background-color: #f0f0f0;
- z-index: 99999;
-}
-
-.card h2 {
- padding: 15px 10px;
- font-size: 25px;
- transition: all 0.1s;
- z-index: -99;
- line-height: 17px;
-}
-
-.card span {
- font-size: 18px;
-}
-
-.card:hover h2 {
- opacity: 0;
- width: 100%;
- position: absolute;
- transition: all 0.5s;
-}
-
-.card>p {
- opacity: 0;
- transition: all 0.75s;
-}
-
-.card>p>svg {
- padding: 5px;
-}
-
-.card:hover>p {
- position: absolute;
- bottom: 15px;
- left: 35px;
- opacity: 1;
- transition: all 0.1s;
-}
-
-                                        .love-heart:before,#switch {
-                                         display: none;
-                                        }
-
-                                        .love-heart, .love-heart::after {
-                                         border-color: hsl(231deg 28% 86%);
-                                         border: 1px solid;
-                                         border-top-left-radius: 100px;
-                                         border-top-right-radius: 100px;
-                                         width: 10px;
-                                         height: 8px;
-                                         border-bottom: 0
-                                        }
-
-                                        .round {
-                                         position: absolute;
-                                         z-index: 1;
-                                         width: 8px;
-                                         height: 8px;
-                                         background: hsl(0deg 0% 100%);
-                                         box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
-                                         border-radius: 100%;
-                                         left: 0px;
-                                         bottom: -1px;
-                                         transition: all .5s ease;
-                                         animation: check-animation2 .5s forwards;
-                                        }
-
-                                        input:checked + label .round {
-                                         transform: translate(0px, 0px);
-                                         animation: check-animation .5s forwards;
-                                         background-color: hsl(0deg 0% 100%);
-                                        }
-
-                                        @keyframes check-animation {
-                                         0% {
-                                          transform: translate(0px, 0px);
-                                         }
-
-                                         50% {
-                                          transform: translate(0px, 7px);
-                                         }
-
-                                         100% {
-                                          transform: translate(7px, 7px);
-                                         }
-                                        }
-
-                                        @keyframes check-animation2 {
-                                         0% {
-                                          transform: translate(7px, 7px);
-                                         }
-
-                                         50% {
-                                          transform: translate(0px, 7px);
-                                         }
-
-                                         100% {
-                                          transform: translate(0px, 0px);
-                                         }
-                                        }
-
-                                        .love-heart {
-                                         box-sizing: border-box;
-                                         position: relative;
-                                         transform: rotate(-45deg) translate(-50%, -33px) scale(4);
-                                         display: block;
-                                         border-color: hsl(231deg 28% 86%);
-                                         cursor: pointer;
-                                         top: 0;
-                                        }
-
-                                        input:checked + .love-heart, input:checked + .love-heart::after, input:checked + .love-heart .bottom {
-                                         border-color: hsl(347deg 81% 61%);
-                                         box-shadow: inset 6px -5px 0px 2px hsl(347deg 99% 72%);
-                                        }
-
-                                        .love-heart::after, .love-heart .bottom {
-                                         content: "";
-                                         display: block;
-                                         box-sizing: border-box;
-                                         position: absolute;
-                                         border-color: hsl(231deg 28% 86%);
-                                        }
-
-                                        .love-heart::after {
-                                         right: -9px;
-                                         transform: rotate(90deg);
-                                         top: 7px;
-                                        }
-
-                                        .love-heart .bottom {
-                                         width: 11px;
-                                         height: 11px;
-                                         border-left: 1px solid;
-                                         border-bottom: 1px solid;
-                                         border-color: hsl(231deg 28% 86%);
-                                         left: -1px;
-                                         top: 5px;
-                                         border-radius: 0px 0px 0px 5px;
-                                        }
+                                                                   </div>
+                                                               </div>
+                                                           </div>
+<button onclick="closePop()">
+    <div class="text">
+        <span>Back</span>
+        <span>to</span>
+        <span>top</span>
+    </div>
+    <div class="clone">
+        <span>Back</span>
+        <span>to</span>
+        <span>top</span>
+    </div>
+<!--     <svg width="20px" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+    </svg> -->
+</button> 
 
 
-        #sampleDialog{
-                height:200px;
-                width:500px;
-                background:white;
-                border:2px solid black;
-                position:fixed;
-                overflow:hidden;
-                z-index:99;
-            }
-            
-            #sampleDialog #title{
-                background-color: black;
-                font-weight:bold;
-                color:white;
-                height:20px;
-                padding:2px;
-            }
-            
-            #sampleDialog #content{
-                padding:2px;
-            }
-            
-            #sampleDialog #title:hover{
-                cursor:move;
-                background:gray;
-            }
-            
-            #sampleDialog #close{
-                cursor:pointer;
-                position:absolute;
-                color:white;
-                font-weight:bold;
-                top:0;
-                z-index:100;
-            }
-            
-            #overlay{
-                width:100%;
-                height:100%;
-                left:0;
-                top:0;
-                position:fixed;
-                background:gray;
-                opacity:0.5;
-                z-index:98;
-            }
-        .center {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #f00;
-            justify-content: center;
-            align-items: center;
-            opacity: 0.5;
-
-
-        }
-        .box {
-            height: 100%;
-            width: 2000;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            flex-direction: column;
-/*            background: #f00;
-            opacity: 10%;*/
-        }
-
-
-        canvas {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            
-           /* background:#990033;*/
-        }
-
-        #pinkboard {
-            position: relative;
-            margin: auto;
-            height: 3000px;
-            width: 3000px;
-            animation: animate 1.3s infinite;
-;
-
-
-        }
-
-        #pinkboard:before,
-        #pinkboard:after {
-            content: '';
-            position: absolute;
-            /* background: #FF5CA4; */
-            background: #FF0000;
-            width: 1000px;
-            height: 1600px;
-            border-top-left-radius: 50px;
-            border-top-right-radius: 50px;
-        }
-
-        #pinkboard:before {
-            left: 100px;
-            transform: rotate(-45deg);
-            transform-origin: 0 100%;
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-                0 10px 10px rgba(0, 0, 0, 0.22);
-        }
-
-        #pinkboard:after {
-            left: 0;
-            transform: rotate(45deg);
-            transform-origin: 100% 100%;
-        }
-
-        #particles-js
-        {
-            height: 100%;
-            display: block;
-        }
-    
-        #iframeAudio
-        #cursor
-        {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #f00;
-            box-sizing: border-box;
-            transition: 0.1s;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            pointer-events: none;
-            cursor: none;
-            animation: animatee 5s linear infinite;
-
-        }
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #f00;
-            justify-content: center;
-            align-items: center;
-            opacity: 80%;
-
-            
-            
-        }
-        .bakground-img
-        {
-                     margin: 0;
-            padding: 0;
-            height: 100vh;
-/*        background: #f66;
-        opacity: 1%;*/  
-        }
-        canvas:hover ~ #cursor
-        {
-            width: 100px;
-            height: 100px;
-            border: 2px dashed #F00;
-        }
-    @keyframes animatee
+</div>
+<script type="text/javascript">
+    function closePop() 
     {
-        0%
-        {
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-        100%
-        {
-            transform: translate(-50%,-50%) rotate(360deg);
-        }
+                   var popup = document.getElementById('popupT')
+            popup.style.display = "none"
     }
-    @keyframes animate {
-            0% {
-                transform: scale(1.2);
-            }
-
-            30% {
-                transform: scale(1);
-            }
-
-            60% {
-                transform: scale(1.4);
-            }
-
-            100% {
-                transform: scale(1.2);
-            }
-        }
-/*        .background-image
-        {
-            background-image: url('https://drive.google.com/file/d/1veOJx9RLgR9-KTWowOq-7cbj_WhECsh3/view?usp=share_link');
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 100px;
-            height: 100vh;
-        }*/
-/* Container holding the image and the text */
-.container {
-  position: relative;
-}
-
-/* Bottom right text */
-.text-block {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: black;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-  opacity: 45%;
-}
-.text-block-top
-{
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 0 0 30px 30px;
-    opacity: 0;
-    transition: 0.5s;
-}
-.text-block-top:hover
-{
-    position: absolute;
-    top: 50px;
-    left: 50px;
-      padding-left: 20px;
-  padding-right: 20px;
-  opacity: 1;
-    transition: 0.5s; 
-
-}
-.bg{
-            height: 100%;
-            width: 2000;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            flex-direction: column;
-            background: #f00;
-            opacity: 5%;
-
-}
-.❤️{
-    color: #f00;
-}
-#bgd 
-{
-            position: relative;
-            margin: auto;
-            height: 3000px;
-            width: 3000px;
-            animation: animate 1.3s infinite;
-}
-
-    </style>
-
-</head>
-<body>
-<!--    <img src="img.png" alt="Snow" style="width:100%;"> -->
-    <div id="player"></div>
-    <div class="bg"><canvas id="bgd"></canvas></div>
-    <div class="centered">
-
-      <h1 class="STARDUST3">BESIDE<strong>❤</strong> Y O U</h1>
- 
-    </div>
-
-
-    <div class="centered">
-
-        <h2>Nov.9th.2022</h2>
-      <h3></h3>
-      <h4>🥥_cocomelon45_🍉</h4>
-                    
-
-    </div>
-                
-
-    <div class="background-image"></div>
-
-
-<!--     <div class="box">
-        <canvas id="pinkboard"></canvas>
-    </div> -->
-
-    <div id="particles-js" style="display: none;"></div>
-
-    <div class="container">
-
-  <div class="text-block">
-<!--     <p>Nếu có một ngày cậu nhớ ra cái link này và mở lên</p>
-    <p>Thì mình muốn cậu biết là:</p>
-    <h4 class="❤️">Mình vẫn yêu cậu rất nhiều ❤️</h4> -->
-    <h4>🦭 Biết tại sao ngôi sao đó sáng không? <br/> Do được cậu nhìn nên nó mới có cơ hội tỏa sáng đó ❤️</h4>
-    <audio controls autoplay loop>
-    <source src="https://docs.google.com/uc?export=download&id=1lqIiBBhNU4UKaIHFELjhbOxhX1jGynxp" type="audio/mpeg">
-</audio>
-
-  </div>
-</div>
-
-<div class="text-block-top">
-<div class="love">
-  <input id="switch" type="checkbox">
-  <label class="love-heart" onclick="particles()" for="switch">
-    <i class="left"></i>
-    <i class="right"></i>
-    <i class="bottom"></i>
-    <div class="round"></div>
-  </label>
-</div>
-</div>
-    <script type="text/javascript">
-        function particles(){
-        var heart = document.getElementById('particles-js');
-        if (heart.style.display === "none") {
-    heart.style.display = "block";
-  } else {
-    heart.style.display = "none";
-  }
-    }
-    </script>
-
-
-    <div id ="cursor"></div>
+</script>
 
     <!-- <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/symbols/sym-6/sym501.ani), url(https://cur.cursors-4u.net/symbols/sym-6/sym501.png), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2010/04/17/animated-sparkly-love-heart.html" target="_blank" title="Animated  Sparkly Love Heart"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Animated  Sparkly Love Heart" style="position:absolute; top: 0px; right: 0px;" /></a> -->
 
